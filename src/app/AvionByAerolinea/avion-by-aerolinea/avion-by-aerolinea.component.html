@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12-text-center">
+            <h2>Listado de Aviones por Aerolinea</h2>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Numero</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Capacidad</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let a of AvinesByAErolinea">
+                        <th scope="row">{{a.id}}</th>
+                        <td>{{a.numeroRegistro}}</td>
+                        <td>{{a.Modelo}}</td>
+                        <td>{{a.Capacidad}}</td>
+                        <td><a class="btn btn-success btn-xs" >Detalle</a></td>
+                        <td><a class="btn btn-primary btn-xs" >Editar</a></td>
+                        <td><a class="btn btn-danger btn-xs" >Eliminar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+</div>

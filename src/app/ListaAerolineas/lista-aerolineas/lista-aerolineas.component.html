@@ -1,0 +1,28 @@
+<p>Aerolineas</p>
+<h1>Alta de Aerolineas</h1>
+
+<div class="container">
+    <h1> Listado Aerolineas</h1>
+
+    <table class="table table-bordered" width="100%" cellSpacing="0">
+        <thead>
+            <th> Id</th>
+            <th> Nombre</th>
+            <th> Pais</th>
+            <th> IATA</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of resultados">
+                <th scope="row">{{r.id}}</th>
+                <th scope="row">{{r.name}}</th>
+                <th scope="row">{{r.country}}</th>
+                <th scope="row">{{r.iata}}</th>
+                <th scope="row"><button class="btn btn-success" [routerLink]="['/DetalleAerolinea', r.id]">Detalle</button></th>
+                <th scope="row"><button class="btn btn-primary" [routerLink]="['/EdicionAerolinea', r.id]">Editar</button></th>
+                <th><button class="btn btn-danger btn-xs" (click)="eliminar(r.id)">Eliminar</button></th>
+                <th scope="row"><button class="btn btn-warning"[routerLink]="['/aerolinea', r.id,]">Ver aviones</button></th>       
+            </tr>
+        </tbody>
+    </table>
+
+</div>
